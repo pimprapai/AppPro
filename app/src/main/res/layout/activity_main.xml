@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#10111111">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="212dp"
+            android:layout_height="100dp"
+            android:weightSum="1"
+            android:layout_weight="1.01">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="MY CHENG-MENG"
+                android:id="@+id/textView"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#474246"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp">
+
+            <!--<ImageView-->
+            <!--android:layout_width="87dp"-->
+            <!--android:layout_height="85dp"-->
+            <!--android:id="@+id/imageView"-->
+            <!--android:src="@drawable/chinese17" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="110dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center">
+
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Enert your name"
+            android:id="@+id/textView2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:inputType="textPersonName"
+            android:text="Name"
+
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center">
+
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Enter your password"
+            android:id="@+id/textView3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:text="password"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+  </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+
+        android:gravity="center"
+        android:layout_gravity="top"
+       >
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="Join"
+            android:id="@+id/BTjoin"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="0dp"
+            android:onClick="buttonClicked" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:weightSum="1">
+
+
+        <TextView
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:text="Create account"
+            android:id="@+id/TextCreateAcc"
+            android:layout_gravity="right"
+            android:gravity="bottom|right"
+            android:textSize="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:password="false"
+            android:onClick="buttonClicked" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
