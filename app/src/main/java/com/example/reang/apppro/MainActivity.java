@@ -28,7 +28,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class MainActivity extends ActionBarActivity{
+public class MainActivity extends ActionBarActivity implements  Runnable{
 
 
     ArrayList<Map<String, String>> data;
@@ -39,25 +39,25 @@ public class MainActivity extends ActionBarActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        data = new ArrayList<Map<String, String>>();
-//        adapter = new SimpleAdapter(this,
-//                data,
-//                android.R.layout.simple_list_item_2,
-//                new String[] {"username", "password"},
-//                new int[] {android.R.id.text1, android.R.id.text2});
-//        ListView l = (ListView)findViewById(R.id.listtest);
-//        l.setAdapter(adapter);
-//        LoginTask task = new LoginTask();
-//        task.execute("https://ict.siit.tu.ac.th/~u5522791086/login.json", " LOGIN");
-//
+        data = new ArrayList<Map<String, String>>();
+        adapter = new SimpleAdapter(this,
+                data,
+                android.R.layout.simple_list_item_2,
+                new String[] {"username", "password"},
+                new int[] {android.R.id.text1, android.R.id.text2});
+        ListView l = (ListView)findViewById(R.id.listtest);
+        l.setAdapter(adapter);
+        LoginTask task = new LoginTask();
+        task.execute();
+
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        LoginTask w = new LoginTask();
-        w.execute("https://ict.siit.tu.ac.th/~u5522791086/login.json", " LOGIN");
+        //LoginTask w = new LoginTask();
+        //w.execute("https://ict.siit.tu.ac.th/~u5522791086/login.json", " LOGIN");
     }
 
     @Override
@@ -87,9 +87,11 @@ public class MainActivity extends ActionBarActivity{
 
      public void buttonClicked(View v){
         int id=v.getId();
-
+        TextView Textname;
         if(id==R.id.BTjoin) //change button name
         {
+//            if()
+
             Intent i=new Intent(this ,Homepage.class);
 
             startActivity(i);
@@ -103,12 +105,15 @@ public class MainActivity extends ActionBarActivity{
         //else if..
     }
 
+    @Override
+    public void run() {
 
+    }
 
     class LoginTask extends AsyncTask<String,Void,Boolean>
     {
         String errorMsg = "";
-        String title;
+
 
         String username,password;
 
@@ -118,7 +123,7 @@ public class MainActivity extends ActionBarActivity{
             StringBuilder buffer = new StringBuilder();
             String line;
             try {
-                  title = params[1];
+                //  title = params[1];
                 URL u = new URL("http://ict.siit.tu.ac.th/~u5522791086/login.json");
                 HttpURLConnection h = (HttpURLConnection)u.openConnection();
                 h.setRequestMethod("GET");
@@ -141,7 +146,7 @@ public class MainActivity extends ActionBarActivity{
                         password = juser.getJSONObject(i).getString("password");
 
 
-                    }
+
 
 
                     Map<String, String> item = new HashMap<String, String>();
@@ -149,7 +154,7 @@ public class MainActivity extends ActionBarActivity{
                     item.put("password", password);
                     data.add(0, item);
 
-
+                }
 
                     errorMsg = "";
                     return true;
@@ -158,13 +163,13 @@ public class MainActivity extends ActionBarActivity{
                     errorMsg = "HTTP Error";
                 }
             } catch (MalformedURLException e) {
-                Log.e("LoginTask", "URL Error");
+                Log.e("WeatherTask", "URL Error");
                 errorMsg = "URL Error";
             } catch (IOException e) {
-                Log.e("LoginTask", "I/O Error");
+                Log.e("WeatherTask", "I/O Error");
                 errorMsg = "I/O Error";
             } catch (JSONException e) {
-                Log.e("LoginTask", "JSON Error");
+                Log.e("WeatherTask", "JSON Error");
                 errorMsg = "JSON Error";
             }
             return false;
@@ -181,10 +186,10 @@ public class MainActivity extends ActionBarActivity{
 //
 //            listView = (ListView) findViewById(R.id.listView);
 //          //  tvWeather = (TextView)findViewById(R.id.tvWeather);
-            ListView l = (ListView) findViewById(R.id.listtest);
-            l.setAdapter(adapter);
+         //   ListView l = (ListView) findViewById(R.id.listtest);
+         //   l.setAdapter(adapter);
 //
-            if (result) {
+         //   if (result) {
 //                listView.setText(listView);
 //            Map<String, String> item = new HashMap<String, String>();
 //            item.put("username", username);
@@ -192,10 +197,10 @@ public class MainActivity extends ActionBarActivity{
 //            data.add(0, item);
 //
 //            }
-              //  listtest.setText(adapter);
+                //listtest.setText(adapter);
 
 
-            }
+          //  }
         }
     }
 
