@@ -122,9 +122,7 @@
         android:layout_width="fill_parent"
         android:layout_height="65dp"
 
-        android:gravity="center"
-        android:layout_gravity="top"
-       >
+        android:gravity="center">
         <Button
             android:layout_width="80dp"
             android:layout_height="50dp"
@@ -143,6 +141,12 @@
         android:gravity="center"
         android:weightSum="1">
 
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:id="@+id/listtest"
+            android:layout_weight="0.90" />
 
         <TextView
             android:layout_width="155dp"

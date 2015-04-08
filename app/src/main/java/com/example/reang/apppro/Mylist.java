@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class Mylist extends ActionBarActivity {
@@ -36,4 +37,19 @@ public class Mylist extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void buttonClicked(View v) {
+        int id=v.getId();
+
+        if(id==R.id.BThome) //change button name
+        {
+
+            this.finish();
+        }
+
+
+
+    }
+
+
 }

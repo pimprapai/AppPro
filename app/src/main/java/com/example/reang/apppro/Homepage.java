@@ -43,17 +43,28 @@ public class Homepage extends ActionBarActivity {
         int id=v.getId();
 
 
-//        if(id==R.id.icontodolist){
+        if(id==R.id.icontodolist){
+            Intent i=new Intent(this ,Todolist.class);
+
+            startActivity(i);
+        }
+//        if(id==R.id.iconmap){
 //            Intent i=new Intent(this ,Todolist.class);
 //
 //            startActivity(i);
 //        }
-     //   if(id==R.id.BTlogout){
-//            this.finish();
+            if(id==R.id.iconmylist){
+            Intent i=new Intent(this ,Mylist.class);
+
+            startActivity(i);
+        }
+
+        if(id==R.id.BTlogout){
+            this.finish();
 //              Intent i=new Intent(this ,Sign_up.class);
 //
 //
-//        }
+        }
         //else if..
     }
 

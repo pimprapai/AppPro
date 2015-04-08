@@ -123,9 +123,8 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="30dp"
-                android:gravity="top|center"
-                android:background="#DABEFF" >
+                android:layout_height="20dp"
+                android:gravity="top|center">
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -171,7 +170,8 @@
                         android:layout_gravity="center"
                         android:layout_below="@+id/editText4"
                         android:layout_alignRight="@+id/editText4"
-                        android:layout_alignEnd="@+id/editText4" />
+                        android:layout_alignEnd="@+id/editText4"
+                        android:onClick="buttonClicked" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

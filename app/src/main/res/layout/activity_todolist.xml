@@ -219,7 +219,8 @@
                             android:layout_gravity="center"
                             android:layout_below="@+id/editText4"
                             android:layout_alignRight="@+id/editText4"
-                            android:layout_alignEnd="@+id/editText4" />
+                            android:layout_alignEnd="@+id/editText4"
+                            android:onClick="buttonClicked" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
